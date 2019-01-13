@@ -26,9 +26,20 @@ regCmd.regCmdRet = function (cmdNo, cmdName, proto, target) {
     this.cmdCheck(cmdNo, cmdName, proto);
     misc.assert(!this.cmdMapRet[cmdNo], "命令号重复注册"+cmdNo);
     misc.assert(!this.cmdMapRet[cmdName], "命令名重复注册"+cmdName);
-    var cmd = [cmdNo, cmdName, proto, target];
+
+    let module = null;
+    if (cmdNo != 1100) {
+        let game = require("game");
+        module = game.user.findRpcHandler(cmdName);
+        if (!module) {
+            console.error("消息处理函数未定义:", cmdName);
+            return;
+        }
+    }
+
+    var cmd = [cmdNo, cmdName, proto, target, module];
     this.cmdMapRet[cmdNo] = cmd;
-    this.cmdMapRet[cmdName] = cmd;
+    this.cmdMapRet[cmdName] = cmd ;
 };
 
 regCmd.getCmdReq = function(sCmdName) {
@@ -42,41 +53,49 @@ regCmd.getCmdRet = function(nCmdNo) {
 
 
 ///////////////////注册PROTOBUF协议函数////////////////////
-regCmd.pbCmdRange = [8001, 40000]; //指令范围
-regCmd.pbCmdMapReq = {}; //请求指令MAP
-regCmd.pbCmdMapRet = {}; //返回指令MAP
+regCmd.pbRange = [8001, 40000]; //指令范围
+regCmd.pbMapReq = {}; //请求指令MAP
+regCmd.pbMapRet = {}; //返回指令MAP
 
 regCmd.pbCmdCheck = function (cmdNo, cmdName, proto) {
     misc.assert(cmdNo && cmdName && proto, "参数错误");
-    misc.assert(cmdNo >= this.pbCmdRange[0] && cmdNo <= this.pbCmdRange[1], "非法指令号:"+cmdNo);
+    misc.assert(cmdNo >= this.pbRange[0] && cmdNo <= this.pbRange[1], "非法指令号:"+cmdNo);
 };
 
 regCmd.regPBReq = function (cmdNo, cmdName, proto, target) {
     target = target ? target : 0;
     this.pbCmdCheck(cmdNo, cmdName, proto);
-    misc.assert(!this.pbCmdMapReq[cmdNo], "命令号重复注册"+cmdNo);
-    misc.assert(!this.pbCmdMapReq[cmdName], "命令名重复注册"+cmdName);
+    misc.assert(!this.pbMapReq[cmdNo], "命令号重复注册"+cmdNo);
+    misc.assert(!this.pbMapReq[cmdName], "命令名重复注册"+cmdName);
     var cmd = [cmdNo, cmdName, proto, target];
-    this.pbCmdMapReq[cmdNo] = cmd;
-    this.pbCmdMapReq[cmdName] = cmd;
+    this.pbMapReq[cmdNo] = cmd;
+    this.pbMapReq[cmdName] = cmd;
 };
 
 regCmd.regPBRet = function (cmdNo, cmdName, proto, target) {
     target = target ? target : 0;
     this.pbCmdCheck(cmdNo, cmdName, proto);
-    misc.assert(!this.pbCmdMapRet[cmdNo], "命令号重复注册"+cmdNo);
-    misc.assert(!this.pbCmdMapRet[cmdName], "命令名重复注册"+cmdName);
-    var cmd = [cmdNo, cmdName, proto, target];
-    this.pbCmdMapRet[cmdNo] = cmd;
-    this.pbCmdMapRet[cmdName] = cmd;
+    misc.assert(!this.pbMapRet[cmdNo], "命令号重复注册"+cmdNo);
+    misc.assert(!this.pbMapRet[cmdName], "命令名重复注册"+cmdName);
+
+    let game = require("game");
+    module = game.user.findRpcHandler(cmdName);
+    if (!module) {
+        console.error("消息处理函数未定义:", cmdName);
+        return;
+    }
+
+    var cmd = [cmdNo, cmdName, proto, target, module];
+    this.pbMapRet[cmdNo] = cmd;
+    this.pbMapRet[cmdName] = cmd;
 };
 
 regCmd.getPBReq = function(sCmdName) {
-    return this.pbCmdMapReq[sCmdName];
+    return this.pbMapReq[sCmdName];
 };
 
 regCmd.getPBRet = function(nCmdNo) {
-    return this.pbCmdMapRet[nCmdNo];
+    return this.pbMapRet[nCmdNo];
 };
 
 

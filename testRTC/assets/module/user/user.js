@@ -14,22 +14,31 @@ cc.Class({
     extends: comModuleBase,
 
     //自定义消息分发
-    dispatchCmdMsg(cmdNo, cmdName, source, data) {
-        let found = false;
-        for(k in this.moduleMap) {
-            let module = this.moduleMap[k];
-            if (module[cmdName]) {
-                module[cmdName].call(module, data);
-                found = true;
-                break;
-            }
+    dispatchCmdMsg(cmdNo, cmdName, source, module, data) {
+        let fnHandler = module[cmdName];
+        if (!fnHandler) {
+            console.error("消息处理函数未定义:", cmdName);
+            return; 
         }
-        misc.assert(found, "消息处理函数未定义: "+cmdName);
+        fnHandler.call(module, data);
     },
 
     //proto消息分发
-    dispatchPBMsg(cmdNo, cmdName, source, data) {
-        this.dispatchCmdMsg(cmdNo, cmdName, source, data);
+    dispatchPBMsg(cmdNo, cmdName, source, module, data) {
+        this.dispatchCmdMsg(cmdNo, cmdName, source, module, data);
+    },
+
+    //查找网络消息处理函数
+    findRpcHandler(cmdName) {
+        if (this[cmdName]) {
+            return this; 
+        }
+        for (let k in this.moduleMap) {
+            let module = this.moduleMap[k];
+            if (module[cmdName]) {
+                return module;
+            }
+        }
     },
 
     properties: {
@@ -45,4 +54,10 @@ cc.Class({
     initModule() {
     },
 
+    TestPack(data) {
+
+    },
+    LoginRet(data) {
+
+    },
 });

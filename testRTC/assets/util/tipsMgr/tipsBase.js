@@ -8,6 +8,8 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
+let misc = require("misc");
+
 cc.Class({
     extends: cc.Component,
 
@@ -19,12 +21,13 @@ cc.Class({
         this.isInited = false;
 
         this.tipsList = [];
-        this.cacheNodes = 20;
+        this.cacheNodes = 30;
         this.tipsPoolName = "";
         this.tipsContainer = new cc.Node();
 
         this.speed = 200;       //速度(像素每秒)
         this.interval = 0.1;    //间隔(秒)
+        this.holdTime = 1100;   //悬停静止时间(毫秒)
     },
 
     _init(fnCallback) {
@@ -50,16 +53,17 @@ cc.Class({
     _addContainer(node) {
         node.opacity = 255;
         let offsetHeight = this.tipsContainer.height/2;
+
         for (let i = this.tipsList.length-1; i >= 0; i--) {
-            let node = this.tipsList[i];
-            let rightPosY = (node.height*(i+1))+node.height/2 - offsetHeight;
-            if (node.y < rightPosY) {
-                node.y = rightPosY;
+            let item = this.tipsList[i];
+            let rightPosY = (item[1].height*(i+1))+item[1].height/2 - offsetHeight;
+            if (item[1].y < rightPosY) {
+                item[1].y = rightPosY;
             }
          }
         node.y = node.height/2 - offsetHeight;
         node.parent = this.tipsContainer;
-        this.tipsList.unshift(node);
+        this.tipsList.unshift([misc.msTime(), node]);
         this.tipsContainer.parent = cc.director.getScene();
         if (this.tipsList.length == 1) {
             this.schedule(this._onTimer, this.interval);
@@ -70,16 +74,21 @@ cc.Class({
         let game = require("game");
         let sliceIndex = -1;
         let offsetHeight = this.tipsContainer.height/2;
+        let msTime = misc.msTime();
+
         for (let i = this.tipsList.length-1; i >= 0; i--) {
-            let node = this.tipsList[i];
-            node.y += this.interval * this.speed;
+            let item = this.tipsList[i];
+            if (msTime - item[0] < this.holdTime) {
+                break;
+            }
+            item[1].y += this.interval * this.speed;
 
-            let distance = node.y + offsetHeight;
+            let distance = item[1].y + offsetHeight;
             let distRatio = Math.max(0, 1 - distance/this.tipsContainer.height);
-            node.opacity = 255 * distRatio;
+            item[1].opacity = 255 * distRatio;
 
-            if (node.y >= this.tipsContainer.height+node.height/2) {
-                game.npMgr.put(this.tipsPoolName, node);
+            if (item[1].y >= this.tipsContainer.height+item[1].height/2) {
+                game.npMgr.put(this.tipsPoolName, item[1]);
                 sliceIndex = i;
             }
         }
@@ -98,8 +107,8 @@ cc.Class({
 
     clearAllTips() {
         for (let i = this.tipsList.length-1; i >= 0; i--) {
-            let node = this.tipsList[i];
-            game.npMgr.put(this.tipsPoolName, node);
+            let item = this.tipsList[i];
+            game.npMgr.put(this.tipsPoolName, item[1]);
         }
         this.tipsList = [];
         this.tipsContainer.parent = null;

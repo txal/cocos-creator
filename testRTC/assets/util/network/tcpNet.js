@@ -232,7 +232,7 @@ cc.Class({
 				this.heartBeatRet(data[0]);
 
 			} else if (cltCmdRpc.dispatchCmdMsg) {
-				this.packetCache.push([1, cmdNo, cmd[1], source, data])
+				this.packetCache.push([1, cmdNo, cmd[1], source, cmd[4], data])
 
 			} else {
 				misc.assert(false, "找不到处理函数:"+cmd[1]);
@@ -247,7 +247,7 @@ cc.Class({
 			data = protoBuilder.decode(data, cmd[2]);
 
 			if (cltPBRpc.dispatchPBMsg) {
-				this.packetCache.push([2, cmdNo, cmd[1], source, data])
+				this.packetCache.push([2, cmdNo, cmd[1], source, cmd[4], data])
 
 			} else {
 				misc.assert(false, "找不到处理函数:"+cmd[1]);
@@ -264,10 +264,10 @@ cc.Class({
 		if (this.packetCache.length > 0) {
 			let cmd = this.packetCache.shift();
 			if (cmd[0] == 1) {
-				cltCmdRpc.dispatchCmdMsg(cmd[1], cmd[2], cmd[3], cmd[4]);
+				cltCmdRpc.dispatchCmdMsg(cmd[1], cmd[2], cmd[3], cmd[4], cmd[5]);
 
 			} else if (cmd[0] == 2) {
-				cltPBRpc.dispatchPBMsg(cmd[1], cmd[2], cmd[3], cmd[4]);
+				cltPBRpc.dispatchPBMsg(cmd[1], cmd[2], cmd[3], cmd[4], cmd[5]);
 			}
 		}
 	},
