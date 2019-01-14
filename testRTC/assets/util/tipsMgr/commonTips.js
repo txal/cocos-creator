@@ -17,9 +17,10 @@ cc.Class({
     },
 
     ctor() {
-        this.tipsPoolName = "commonTips";
+        this.tipsPoolName = "commonTips"; //对象池
     },
 
+    //初始化容器
     _initContainer() {
         let scene = cc.director.getScene();
         let canvas = scene.getChildByName("Canvas");
@@ -29,6 +30,7 @@ cc.Class({
         this.tipsContainer.y = canvas.height/4*3;
     },
 
+    //初始化TIPS资源
     _initTipsPrefab(fnCallback) {
         let self = this;
         let game = require("game");
@@ -48,6 +50,7 @@ cc.Class({
         });
     },
 
+    //创建TIPS对象
     _createTips(cont) {
         let game = require("game");
         let node = game.npMgr.get(this.tipsPoolName);

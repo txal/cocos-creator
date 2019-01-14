@@ -12,7 +12,6 @@ cc.Class({
     ctor() {
         //这里定义一堆对象池,根据用途起名
         this.npMap["bullet"] = new cc.NodePool();
-        this.npMap["richTips"] = new cc.NodePool();
         this.npMap["commonTips"] = new cc.NodePool();
     },
 

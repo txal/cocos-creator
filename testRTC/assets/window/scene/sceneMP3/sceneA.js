@@ -34,7 +34,7 @@ cc.Class({
         }, this);
 
         this.btnDialog.node.on("click", function() {
-            let node = game.uiMgr.createUI("panelTest", this.panelTest);
+            let node = game.uiMgr.createUIFromPrefab("panelTest", this.panelTest);
             node.parent = cc.director.getScene();
             game.tipsMgr.commonTips("游戏游戏游戏");
 

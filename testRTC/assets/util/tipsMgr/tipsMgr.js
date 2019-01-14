@@ -23,6 +23,10 @@ cc.Class({
 
     commonTips(cont) {
        this._commonTips.tips(cont);
-    }
+    },
+
+    closeAllTips() {
+        this._commonTips.closeAllTips();
+    },
 
 });

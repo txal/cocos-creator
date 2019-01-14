@@ -23,18 +23,23 @@ cc.Class({
 
         let game = require("game");
         game.uiMgr.closeAllUI();
+        game.tipsMgr.closeAllTips();
         cc.director.loadScene(tarSceneName); 
 
     },
 
     //预加载进度
     onProgress(completedCount, totalCount, latestItem) {
-        console.log("onProgress***", this, completedCount, totalCount, latestItem);
+        console.log("onProgress***", completedCount, totalCount);
     },
 
     //预加载完成
-    onLoaded(error, asset) {
-        console.log("onLoaded***", this, error, asset);
+    onLoaded(error, asset, tarSceneName) {
+        if (error) {
+            console.error(error);
+            return;  
+        }
+        this.loadScene(tarSceneName);
     },
 
     //预加载,带进度条
@@ -42,8 +47,13 @@ cc.Class({
         let self = this;
         let curScene = cc.director.getScene();
 
-        let game = require("game");
-        game.uiMgr.closeAllUI();
-        cc.director.preloadScene(tarSceneName, function() { self.onProgress() }, function() { self.onLoaded() });
+        //加载进度
+        cc.loader.onProgress = function(completedCount, totalCount, latestItem) {
+            self.onProgress(completedCount, totalCount, latestItem); 
+        }
+        cc.director.preloadScene(tarSceneName, function(error, asset) {
+            cc.loader.onProgress = null;
+            self.onLoaded(error, asset, tarSceneName);
+        });
     }
 });

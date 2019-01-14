@@ -27,7 +27,7 @@ cc.Class({
 
         this.speed = 200;       //速度(像素每秒)
         this.interval = 0.1;    //间隔(秒)
-        this.holdTime = 1100;   //悬停静止时间(毫秒)
+        this.holdTime = 1000;   //悬停静止时间(毫秒)
     },
 
     _init(fnCallback) {
@@ -64,7 +64,10 @@ cc.Class({
         node.y = node.height/2 - offsetHeight;
         node.parent = this.tipsContainer;
         this.tipsList.unshift([misc.msTime(), node]);
+
         this.tipsContainer.parent = cc.director.getScene();
+        this.tipsContainer.zIndex = 1024; //永远在前面
+
         if (this.tipsList.length == 1) {
             this.schedule(this._onTimer, this.interval);
         }
@@ -105,7 +108,9 @@ cc.Class({
         console.error("请在子类实现");
     },
 
-    clearAllTips() {
+    //关闭所有TIPS
+    closeAllTips() {
+        let game = require("game");
         for (let i = this.tipsList.length-1; i >= 0; i--) {
             let item = this.tipsList[i];
             game.npMgr.put(this.tipsPoolName, item[1]);

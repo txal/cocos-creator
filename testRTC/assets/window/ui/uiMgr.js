@@ -25,16 +25,43 @@ cc.Class({
 
     //@name 界面名称
     //@prefab 界面预制件
-    createUI(name, prefab) {
+    createUIFromPrefab(name, prefab) {
         let node = this.uiMap[name];
         if (!node) {
             node = cc.instantiate(prefab);
             this.uiMap[name] = node;
         }
         if (!cc.isValid(node)) {
-            misc.assert(false, "节点["+name+"]已被销毁但没有显式调用uiMgr.destroyUI(通常是切换场景时随场景一起销毁了)");
+            misc.assert(false, "UI节点["+name+"]已被销毁但没有显式调用uiMgr.destroyUI(通常是切换场景时随场景一起销毁了)");
         }
         return node;
+    },
+
+    //@name 界面名称
+    //@prefabPath 预制件资源路径
+    //@fnCallback 创建完成回调
+    createUIFromPath(name, prefabPath, fnCallback) {
+        misc.assert(fnCallback, "未定义回调函数");
+        let node = this.uiMap[name];
+        if (node) {
+            if (!cc.isValid(node)) {
+                misc.assert(false, "UI节点["+name+"]已被销毁但没有显式调用uiMgr.destroyUI(通常是切换场景时随场景一起销毁了)");
+                return;
+            }
+            fnCallback(node);
+        }
+
+        let self = this;
+        cc.loader.loadRes(prefabPath, function (err, prefab) {
+            if (!err) {
+                let node = self.createUIFromPrefab(name, prefab);
+                fnCallback(node);
+
+            } else {
+                console.error(err);
+            }
+
+        });
     },
 
     closeUI(name, cleanup=false) {
@@ -45,6 +72,7 @@ cc.Class({
         node.removeFromParent(cleanup);
     },
 
+    //没有释放任何资源的
     destroyUI(name) {
         let node = this.uiMap[name]
         if (!node) {
