@@ -26,6 +26,9 @@ cc.Class({
     //@name 界面名称
     //@prefab 界面预制件
     createUIFromPrefab(name, prefab) {
+        //设置场景自动释放情况下,不自动释放prefab
+        cc.loader.setAutoReleaseRecursively(prefab, false);
+
         let node = this.uiMap[name];
         if (!node) {
             node = cc.instantiate(prefab);

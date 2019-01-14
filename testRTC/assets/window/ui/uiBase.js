@@ -23,4 +23,11 @@ cc.Class({
        this._keepOpen = keepOpen; 
     },
 
+    // 我的做法是在遮罩层上做事件监听，
+    // youMask.on('touchStart',function(e){
+    // e.stopPropagation();
+    // })
+
+
+
 });
