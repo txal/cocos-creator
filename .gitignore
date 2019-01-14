@@ -1,0 +1,124 @@
+/lame-3.100/obj/Debug/app lame/app lame.bsc
+/lame-3.100/obj/Debug/app lame/app lame.tlog/BscMake.command.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/CL.command.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/CL.read.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/CL.write.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/app lame.lastbuildstate
+/lame-3.100/obj/Debug/app lame/app lame.tlog/bscmake.read.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/bscmake.write.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/link.command.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/link.read.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/link.write.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/rc.command.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/rc.read.1.tlog
+/lame-3.100/obj/Debug/app lame/app lame.tlog/rc.write.1.tlog
+/lame-3.100/obj/Debug/app lame/brhist.obj
+/lame-3.100/obj/Debug/app lame/brhist.sbr
+/lame-3.100/obj/Debug/app lame/console.obj
+/lame-3.100/obj/Debug/app lame/console.sbr
+/lame-3.100/obj/Debug/app lame/get_audio.obj
+/lame-3.100/obj/Debug/app lame/get_audio.sbr
+/lame-3.100/obj/Debug/app lame/lame.res
+/lame-3.100/obj/Debug/app lame/lame_main.obj
+/lame-3.100/obj/Debug/app lame/lame_main.sbr
+/lame-3.100/obj/Debug/app lame/lametime.obj
+/lame-3.100/obj/Debug/app lame/lametime.sbr
+/lame-3.100/obj/Debug/app lame/main.obj
+/lame-3.100/obj/Debug/app lame/main.sbr
+/lame-3.100/obj/Debug/app lame/parse.obj
+/lame-3.100/obj/Debug/app lame/parse.sbr
+/lame-3.100/obj/Debug/app lame/timestatus.obj
+/lame-3.100/obj/Debug/app lame/timestatus.sbr
+/lame-3.100/obj/Debug/app lame/vc140.pdb
+/lame-3.100/obj/Debug/app lame/vc9_lame_lame.log
+/lame-3.100/obj/Debug/libmp3lame-static/VbrTag.obj
+/lame-3.100/obj/Debug/libmp3lame-static/VbrTag.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/bitstream.obj
+/lame-3.100/obj/Debug/libmp3lame-static/bitstream.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/encoder.obj
+/lame-3.100/obj/Debug/libmp3lame-static/encoder.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/fft.obj
+/lame-3.100/obj/Debug/libmp3lame-static/fft.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/gain_analysis.obj
+/lame-3.100/obj/Debug/libmp3lame-static/gain_analysis.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/id3tag.obj
+/lame-3.100/obj/Debug/libmp3lame-static/id3tag.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/lame.obj
+/lame-3.100/obj/Debug/libmp3lame-static/lame.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/BscMake.command.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/CL.command.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/CL.read.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/CL.write.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/Lib-link.read.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/Lib-link.write.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/bscmake.read.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/bscmake.write.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/custombuild.command.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/custombuild.read.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/custombuild.write.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/lib.command.1.tlog
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3la.20536101.tlog/libmp3lame-static.lastbuildstate
+/lame-3.100/obj/Debug/libmp3lame-static/libmp3lame-static.bsc
+/lame-3.100/obj/Debug/libmp3lame-static/mpglib_interface.obj
+/lame-3.100/obj/Debug/libmp3lame-static/mpglib_interface.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/newmdct.obj
+/lame-3.100/obj/Debug/libmp3lame-static/newmdct.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/presets.obj
+/lame-3.100/obj/Debug/libmp3lame-static/presets.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/psymodel.obj
+/lame-3.100/obj/Debug/libmp3lame-static/psymodel.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/quantize.obj
+/lame-3.100/obj/Debug/libmp3lame-static/quantize.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/quantize_pvt.obj
+/lame-3.100/obj/Debug/libmp3lame-static/quantize_pvt.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/reservoir.obj
+/lame-3.100/obj/Debug/libmp3lame-static/reservoir.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/set_get.obj
+/lame-3.100/obj/Debug/libmp3lame-static/set_get.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/tables.obj
+/lame-3.100/obj/Debug/libmp3lame-static/tables.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/takehiro.obj
+/lame-3.100/obj/Debug/libmp3lame-static/takehiro.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/util.obj
+/lame-3.100/obj/Debug/libmp3lame-static/util.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/vbrquantize.obj
+/lame-3.100/obj/Debug/libmp3lame-static/vbrquantize.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/vc9_libmp3lame.log
+/lame-3.100/obj/Debug/libmp3lame-static/version.obj
+/lame-3.100/obj/Debug/libmp3lame-static/version.sbr
+/lame-3.100/obj/Debug/libmp3lame-static/xmm_quantize_sub.obj
+/lame-3.100/obj/Debug/libmp3lame-static/xmm_quantize_sub.sbr
+/lame-3.100/obj/Debug/libmpghip-static/common.obj
+/lame-3.100/obj/Debug/libmpghip-static/common.sbr
+/lame-3.100/obj/Debug/libmpghip-static/dct64_i386.obj
+/lame-3.100/obj/Debug/libmpghip-static/dct64_i386.sbr
+/lame-3.100/obj/Debug/libmpghip-static/decode_i386.obj
+/lame-3.100/obj/Debug/libmpghip-static/decode_i386.sbr
+/lame-3.100/obj/Debug/libmpghip-static/interface.obj
+/lame-3.100/obj/Debug/libmpghip-static/interface.sbr
+/lame-3.100/obj/Debug/libmpghip-static/layer1.obj
+/lame-3.100/obj/Debug/libmpghip-static/layer1.sbr
+/lame-3.100/obj/Debug/libmpghip-static/layer2.obj
+/lame-3.100/obj/Debug/libmpghip-static/layer2.sbr
+/lame-3.100/obj/Debug/libmpghip-static/layer3.obj
+/lame-3.100/obj/Debug/libmpghip-static/layer3.sbr
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.bsc
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/BscMake.command.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/CL.command.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/CL.read.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/CL.write.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/Lib-link.read.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/Lib-link.write.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/bscmake.read.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/bscmake.write.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/custombuild.command.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/custombuild.read.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/custombuild.write.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/lib.command.1.tlog
+/lame-3.100/obj/Debug/libmpghip-static/libmpghip-static.tlog/libmpghip-static.lastbuildstate
+/lame-3.100/obj/Debug/libmpghip-static/tabinit.obj
+/lame-3.100/obj/Debug/libmpghip-static/tabinit.sbr
+/lame-3.100/obj/Debug/libmpghip-static/vc9_mpglib.log
+/lame-3.100/output/Debug/*.pdb
+/lame-3.100/vc_solution/.vs/vc9_lame/v14/*.suo
+/soundtouch-master/source/SoundTouchDLL/*.db
