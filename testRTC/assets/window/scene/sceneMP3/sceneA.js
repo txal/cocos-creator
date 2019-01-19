@@ -9,13 +9,13 @@
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
 let game = require("game");
+let misc = require("misc");
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
         btnDialog: cc.Button,
-        panelTest: cc.Prefab,
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -28,17 +28,22 @@ cc.Class({
 
         this.node.on("click", function() {
             let game = require("game");
-            game.user.sendEvent("panelTest", "say-hello", "---say hello---");
+            game.user.sendEvent("sceneViewer/panelTest", "say-hello", "---say hello---");
 
             game.sceneMgr.preloadScene("B");
         }, this);
 
         this.btnDialog.node.on("click", function() {
-            let node = game.uiMgr.createUIFromPrefab("panelTest", this.panelTest);
-            node.parent = cc.director.getScene();
-            game.tipsMgr.commonTips("游戏游戏游戏");
+            game.uiMgr.createUIFromPath("panelTest", "prefab/panelTest", function(node) {
+                node.parent = cc.director.getScene().getChildByName("sceneViewer");
+                game.tipsMgr.commonTips("游戏游戏游戏");
+            });
 
         }, this);
+
+        misc.loadConf("serverUrl.json", function(data) {
+            console.log(data, "****###");
+        });
 
     },
 

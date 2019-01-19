@@ -6,18 +6,19 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        npMap: { default: {}, },
+        recordList: [],
+        _npMap: { default: {}, },
     },
 
     ctor() {
         //这里定义一堆对象池,根据用途起名
-        this.npMap["bullet"] = new cc.NodePool();
-        this.npMap["commonTips"] = new cc.NodePool();
+        this._npMap["bullet"] = new cc.NodePool();
+        this._npMap["commonTips"] = new cc.NodePool();
     },
 
     //@poolName 对象池名称,为了便于排错,不能自动创建
     getPool(poolName) {
-        return this.npMap[poolName];
+        return this._npMap[poolName];
     },
 
     clearPool(poolName) {
@@ -28,17 +29,24 @@ cc.Class({
     get(poolName, prefab) {
         let pool = this.getPool(poolName);
         misc.assert(pool, "对象池不存在:"+pool);
+
+        let node = null;
         if (pool.size() > 0) {
-            return pool.get();
+            node = pool.get();
+        } else if (prefab) {
+            node = cc.instantiate(prefab);
         }
-        if (prefab) {
-            let node = cc.instantiate(prefab);
-            return node;
-        }
-        return null;
+
+        //防止程序漏了回收导致泄漏
+        cc.loader.setAutoReleaseRecursively(node, true);
+        return node;
     },
 
+    //回收节点
     put(poolName, node) {
+        //设置不自动回收
+        cc.loader.setAutoReleaseRecursively(node, false);
+
         let pool = this.getPool(poolName);
         pool.put(node);
         return pool.size();

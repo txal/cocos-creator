@@ -34,7 +34,7 @@ cc.Class({
     _initTipsPrefab(fnCallback) {
         let self = this;
         let game = require("game");
-        cc.loader.loadRes("prefab/commonTips", function (err, prefab) {
+        cc.loader.loadRes("prefab/panelCommonTips", function (err, prefab) {
             if (!err) {
                 for (let i = 0; i < self.cacheNodes; i++) {
                     var node = cc.instantiate(prefab);

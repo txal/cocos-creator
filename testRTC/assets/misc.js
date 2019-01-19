@@ -48,7 +48,20 @@ let comMisc = cc.Class({
 	getQuerySubString(substr, name) {
         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
         var r = substr.match(reg);
-        if(r!=null) return  unescape(r[2]); return null;
+        if(r!=null) return unescape(r[2]); return null;
+    },
+
+    //加载客户端配置(打包index.html所在目录的json文件)
+    loadConf(name, fnCallback) {
+        let url = window.location.href;
+        cc.loader.load(url+"/"+name, function(err, data) {
+            if (err) {
+                console.error(err);
+                fnCallback(null);
+                return;
+            }
+            fnCallback(data);
+        })
     },
 });
 

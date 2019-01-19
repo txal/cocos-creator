@@ -11,6 +11,7 @@
 //一级界面应该放到此管理器里面,避免频繁释放创建导致卡顿
 
 let misc = require("misc");
+let comUIBase = require("uiBase");
 
 cc.Class({
     extends: cc.Component,
@@ -32,10 +33,15 @@ cc.Class({
         let node = this.uiMap[name];
         if (!node) {
             node = cc.instantiate(prefab);
+            misc.assert(node, "实例化prefab["+prefab+"]失败");
             this.uiMap[name] = node;
         }
-        if (!cc.isValid(node)) {
-            misc.assert(false, "UI节点["+name+"]已被销毁但没有显式调用uiMgr.destroyUI(通常是切换场景时随场景一起销毁了)");
+        misc.assert(cc.isValid(node), "UI节点["+name+"]已被销毁但没有显式调用uiMgr.destroyUI(通常是切换场景时随场景一起销毁了)");
+
+        //调用基类的onLoad,界面名称==挂载的脚本名称
+        let scriptComponent = node.getComponent(name);
+        if (scriptComponent instanceof comUIBase) {
+            comUIBase.prototype.onLoad.call(scriptComponent);
         }
         return node;
     },
@@ -43,35 +49,66 @@ cc.Class({
     //@name 界面名称
     //@prefabPath 预制件资源路径
     //@fnCallback 创建完成回调
-    createUIFromPath(name, prefabPath, fnCallback) {
+    //@showLoading 是否显示加载动画
+    createUIFromPath(name, prefabPath, fnCallback, showLoading=true) {
         misc.assert(fnCallback, "未定义回调函数");
+        let self = this;
         let node = this.uiMap[name];
+
         if (node) {
-            if (!cc.isValid(node)) {
-                misc.assert(false, "UI节点["+name+"]已被销毁但没有显式调用uiMgr.destroyUI(通常是切换场景时随场景一起销毁了)");
-                return;
-            }
+            misc.assert(cc.isValid(node), "UI节点["+name+"]已被销毁但没有显式调用uiMgr.destroyUI(通常是切换场景时随场景一起销毁了)");
             fnCallback(node);
+            return;
         }
 
-        let self = this;
-        cc.loader.loadRes(prefabPath, function (err, prefab) {
-            if (!err) {
+        let fnAfterLoading = function() {
+            cc.loader.loadRes(prefabPath, function (err, prefab) {
+                self._colseLoading();
+                if (err) {
+                    console.error(err);
+                    return;
+                } 
                 let node = self.createUIFromPrefab(name, prefab);
                 fnCallback(node);
 
-            } else {
-                console.error(err);
-            }
+            });
+        }
 
-        });
+        if (name == "panelLoading") {
+           fnAfterLoading(); 
+        } else {
+            if (showLoading) {
+               this._displayLoading(fnAfterLoading);
+            } else {
+                fnAfterLoading();
+            }
+        }
     },
 
+    //显示加载状态
+    _displayLoading(fnCallback) {
+        this.createUIFromPath("panelLoading", "prefab/panelLoading", function(node) {
+            node.parent = cc.director.getScene();
+            fnCallback();
+        })
+    },
+
+    //关闭加载状态
+    _colseLoading() {
+        this.closeUI("panelLoading");
+    },
+
+    //UI名称做参数
     closeUI(name, cleanup=false) {
         let node = this.uiMap[name];
         if (!node) {
             return;
         }
+        node.removeFromParent(cleanup);
+    },
+
+    //UI节点做参数
+    closeUINode(node, cleanup=false) {
         node.removeFromParent(cleanup);
     },
 

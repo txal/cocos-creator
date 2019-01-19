@@ -18,42 +18,60 @@ cc.Class({
     },
 
     //直接跳转,没有进度条
-    loadScene(tarSceneName) {
+    loadScene(sceneName, fnLaunched) {
         let curScene = cc.director.getScene();
 
         let game = require("game");
         game.uiMgr.closeAllUI();
         game.tipsMgr.closeAllTips();
-        cc.director.loadScene(tarSceneName); 
+
+        cc.director.loadScene(sceneName, function() {
+            if (fnLaunched) {
+                fnLaunched();
+            }
+        }); 
 
     },
 
     //预加载进度
-    onProgress(completedCount, totalCount, latestItem) {
-        console.log("onProgress***", completedCount, totalCount);
+    _onProgress(completedCount, totalCount, latestItem) {
+        console.log("onProgress***", completedCount, totalCount, latestItem);
     },
 
     //预加载完成
-    onLoaded(error, asset, tarSceneName) {
+    _onLoaded(error, asset, sceneName) {
         if (error) {
             console.error(error);
             return;  
         }
-        this.loadScene(tarSceneName);
+        this.loadScene(sceneName);
+    },
+
+    //显示加载状态
+    _displayLoading() {
+
+    },
+
+    //关闭加载状态
+    _closeLoading() {
+
     },
 
     //预加载,带进度条
-    preloadScene(tarSceneName) {
+    preloadScene(sceneName) {
         let self = this;
         let curScene = cc.director.getScene();
 
         //加载进度
         cc.loader.onProgress = function(completedCount, totalCount, latestItem) {
-            self.onProgress(completedCount, totalCount, latestItem); 
+            self._onProgress(completedCount, totalCount, latestItem); 
         }
-        cc.director.preloadScene(tarSceneName, function(error, asset) {
+
+        this._displayLoading();
+        cc.director.preloadScene(sceneName, function(error, asset) {
+            self._closeLoading();
             cc.loader.onProgress = null;
-            self.onLoaded(error, asset, tarSceneName);
+            self._onLoaded(error, asset, sceneName);
         });
     }
 });

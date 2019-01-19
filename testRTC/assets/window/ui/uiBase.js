@@ -8,6 +8,8 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
+let misc = require("misc");
+
 cc.Class({
     extends: cc.Component,
 
@@ -23,11 +25,21 @@ cc.Class({
        this._keepOpen = keepOpen; 
     },
 
-    // 我的做法是在遮罩层上做事件监听，
-    // youMask.on('touchStart',function(e){
-    // e.stopPropagation();
-    // })
+    onLoad() {
+        let self = this;
+        //屏蔽穿透
+        this.node.on('touchstart', function(event) {
+            event.stopPropagation();
+        });
 
+        let btnClose = cc.find("nodeContent/btnClose", this.node) 
+        if (btnClose) {
+           btnClose.on("touchend", function(event) {
+                let game = require("game");
+                game.uiMgr.closeUINode(this.node);
+           }, this);
+       }
 
+    },
 
 });

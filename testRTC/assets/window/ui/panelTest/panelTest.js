@@ -19,17 +19,10 @@ cc.Class({
     },
 
     ctor() {
-        console.log("construct***### panelTest");
     },
 
     // LIFE-CYCLE CALLBACKS:
-
     onLoad () {
-       this.btnClose.on("touchend", function(event) {
-            game.uiMgr.closeUI("panelTest");
-
-       }, this);
-
         this.node.on('say-hello', function(event) {
             console.log(event.detail);
 
@@ -43,6 +36,5 @@ cc.Class({
     // update (dt) {},
 
     onDestroy() {
-        console.log("panel test destroy*****");
     },
 });
