@@ -21,14 +21,21 @@ cc.Class({
     },
 
     ctor() {
+        this.oldParent = null; //用于判断界面加载中场景是否已被切换
+    },
 
+    //取场景显示器
+    getSceneViewer() {
+        return cc.director.getScene().getChildByName("sceneViewer");
     },
 
     //@name 界面名称
     //@prefab 界面预制件
-    createUIFromPrefab(name, prefab) {
+    //@是否返回节点,如果是false,则直接添加进场景
+    createUIFromPrefab(name, prefab=null, returnNode=false) {
         //设置场景自动释放情况下,不自动释放prefab
         cc.loader.setAutoReleaseRecursively(prefab, false);
+        this.oldParent = this.getSceneViewer();
 
         let node = this.uiMap[name];
         if (!node) {
@@ -43,21 +50,32 @@ cc.Class({
         if (scriptComponent instanceof comUIBase) {
             comUIBase.prototype.onLoad.call(scriptComponent);
         }
-        return node;
+        if (returnNode) {
+            return node;
+        }
+        if (this.oldParent == this.getSceneViewer()) {
+            node.parent = this.oldParent();
+        }
     },
 
     //@name 界面名称
     //@prefabPath 预制件资源路径
-    //@fnCallback 创建完成回调
+    //@fnCallback 创建完成回调,传null则直接添加进场景
     //@showLoading 是否显示加载动画
-    createUIFromPath(name, prefabPath, fnCallback, showLoading=true) {
-        misc.assert(fnCallback, "未定义回调函数");
+    createUIFromPath(name, prefabPath, fnCallback = null, showLoading=true) {
         let self = this;
-        let node = this.uiMap[name];
+        this.oldParent = this.getSceneViewer();
 
+        let node = this.uiMap[name];
         if (node) {
             misc.assert(cc.isValid(node), "UI节点["+name+"]已被销毁但没有显式调用uiMgr.destroyUI(通常是切换场景时随场景一起销毁了)");
-            fnCallback(node);
+            if (fnCallback) {
+                fnCallback(node);
+                return;
+            }
+            if (this.oldParent == this.getSceneViewer()) {
+                node.parent = this.oldParent;
+            }
             return;
         }
 
@@ -68,20 +86,24 @@ cc.Class({
                     console.error(err);
                     return;
                 } 
-                let node = self.createUIFromPrefab(name, prefab);
-                fnCallback(node);
-
+                let returnNode = fnCallback;
+                let node = self.createUIFromPrefab(name, prefab, returnNode);
+                if (returnNode) {
+                    fnCallback(node);
+                }
             });
         }
 
         if (name == "panelLoading") {
            fnAfterLoading(); 
+
         } else {
             if (showLoading) {
                this._displayLoading(fnAfterLoading);
             } else {
                 fnAfterLoading();
             }
+
         }
     },
 
@@ -112,7 +134,7 @@ cc.Class({
         node.removeFromParent(cleanup);
     },
 
-    //没有释放任何资源的
+    //销毁特定界面(并没有释放任何贴图)
     destroyUI(name) {
         let node = this.uiMap[name]
         if (!node) {
@@ -122,15 +144,27 @@ cc.Class({
         this.uiMap[name] = null;
     },
 
+    //关闭所有UI
     closeAllUI() {
-        for (let k in this.uiMap) {
-            this.closeUI(k);
+        for (let name in this.uiMap) {
+            this.closeUI(name);
         }
     },
 
+    //打开设置了跨场景保留的界面
+    openKeepOpenUI() {
+        for (let name in this.uiMap) {
+            let node = this.uiMap[name];
+            if (node.getComponent(name).isKeepOpen()) {
+                this.createUIFromPrefab(name);
+            }
+        }
+    },
+
+    //销毁所有界面
     destroyAllUI() {
-        for (let k in this.uiMap) {
-            this.destroyUI(k);
+        for (let name in this.uiMap) {
+            this.destroyUI(name);
         }
     },
 });

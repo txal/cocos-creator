@@ -29,6 +29,7 @@ cc.Class({
             if (fnLaunched) {
                 fnLaunched();
             }
+            game.uiMgr.openKeepOpenUI();
         }); 
 
     },

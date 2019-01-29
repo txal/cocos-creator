@@ -8,20 +8,19 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
+let comScrollViewBase = require("scrollViewBase");
+
 cc.Class({
-    extends: cc.Component,
+    extends: comScrollViewBase,
 
     properties: {
-        scrollView: cc.Node,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
-    },
+    // onLoad () {},
 
     start () {
-
     },
 
     // update (dt) {},
