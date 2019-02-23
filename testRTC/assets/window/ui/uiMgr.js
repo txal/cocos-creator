@@ -54,7 +54,7 @@ cc.Class({
             return node;
         }
         if (this.oldParent == this.getSceneViewer()) {
-            node.parent = this.oldParent();
+            node.parent = this.oldParent;
         }
     },
 

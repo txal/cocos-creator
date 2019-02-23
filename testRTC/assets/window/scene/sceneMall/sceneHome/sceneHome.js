@@ -8,32 +8,27 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
-let comScrollViewBase = require("scrollViewBase");
+let game = require("game");
+let comSceneBase = require("sceneBase");
 
 cc.Class({
-    extends: comScrollViewBase,
+    extends: comSceneBase,
 
     properties: {
+        lblNotice: cc.Label,
     },
 
     // LIFE-CYCLE CALLBACKS:
 
     onLoad () {
-        this._super();
-        this.content.on("touchend", function(touches, event) {
-            let location = touches.getLocation();
-            for (let k = 0; k < this.titlesList.length; k++) {
-               let title = this.titlesList[k];
-               let titleRect = title.getBoundingBoxToWorld();
-               if (titleRect.contains(location)) {
-                    console.log("hit--->", k);
-               }
-            }
-        }, this);
     },
 
     start () {
+        this.lblNotice.string="heheehheheheheeheheheh";
     },
 
     // update (dt) {},
+    
+    onDestroy () {
+    },
 });

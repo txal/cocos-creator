@@ -66,6 +66,7 @@ cc.Class({
 
     tips(cont) {
         let self = this;
+        let game = require("game");
         this._init(function() {
             let node = self._createTips(cont);
             if (!node) {

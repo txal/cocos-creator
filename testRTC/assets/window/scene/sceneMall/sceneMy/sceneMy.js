@@ -8,31 +8,33 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
-let comScrollViewBase = require("scrollViewBase");
-
 cc.Class({
-    extends: comScrollViewBase,
+    extends: cc.Component,
 
     properties: {
+        // foo: {
+        //     // ATTRIBUTES:
+        //     default: null,        // The default value will be used only when the component attaching
+        //                           // to a node for the first time
+        //     type: cc.SpriteFrame, // optional, default is typeof default
+        //     serializable: true,   // optional, default is true
+        // },
+        // bar: {
+        //     get () {
+        //         return this._bar;
+        //     },
+        //     set (value) {
+        //         this._bar = value;
+        //     }
+        // },
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
-        this._super();
-        this.content.on("touchend", function(touches, event) {
-            let location = touches.getLocation();
-            for (let k = 0; k < this.titlesList.length; k++) {
-               let title = this.titlesList[k];
-               let titleRect = title.getBoundingBoxToWorld();
-               if (titleRect.contains(location)) {
-                    console.log("hit--->", k);
-               }
-            }
-        }, this);
-    },
+    // onLoad () {},
 
     start () {
+
     },
 
     // update (dt) {},

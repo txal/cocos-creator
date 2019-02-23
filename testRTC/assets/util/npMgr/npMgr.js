@@ -18,7 +18,9 @@ cc.Class({
 
     //@poolName 对象池名称,为了便于排错,不能自动创建
     getPool(poolName) {
-        return this._npMap[poolName];
+        let pool = this._npMap[poolName];
+        misc.assert(pool, "对象池不存在:"+poolName);
+        return pool;
     },
 
     clearPool(poolName) {
@@ -28,8 +30,6 @@ cc.Class({
     //@prefab 节点预制件,如果传了进来,池子里没有对象自动创建
     get(poolName, prefab) {
         let pool = this.getPool(poolName);
-        misc.assert(pool, "对象池不存在:"+pool);
-
         let node = null;
         if (pool.size() > 0) {
             node = pool.get();
@@ -38,17 +38,22 @@ cc.Class({
         }
 
         //防止程序漏了回收导致泄漏
-        cc.loader.setAutoReleaseRecursively(node, true);
+        // cc.loader.setAutoReleaseRecursively(node, true);
         return node;
     },
 
     //回收节点
     put(poolName, node) {
         //设置不自动回收
-        cc.loader.setAutoReleaseRecursively(node, false);
+        // cc.loader.setAutoReleaseRecursively(node, false);
 
         let pool = this.getPool(poolName);
         pool.put(node);
+        return pool.size();
+    },
+
+    size(poolName) {
+        let pool = this.getPool(poolName);
         return pool.size();
     },
 });

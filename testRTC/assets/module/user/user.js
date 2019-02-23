@@ -12,6 +12,9 @@ let comModuleBase = require("moduleBase");
 
 cc.Class({
     extends: comModuleBase,
+    
+    properties: {
+    },
 
     //自定义消息分发
     dispatchCmdMsg(cmdNo, cmdName, source, module, data) {
@@ -41,11 +44,8 @@ cc.Class({
         }
     },
 
-    properties: {
-        moduleMap: {default: {}, },
-    },
-
     ctor() {
+        this.moduleMap = {};
     },
 
     onRelease() {

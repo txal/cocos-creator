@@ -21,7 +21,7 @@ cc.Class({
     ctor() {
     },
 
-    // LIFE-CYCLE CALLBACKS:
+    //因为有缓存,只会触发1次
     onLoad () {
         this.node.on('say-hello', function(event) {
             console.log(event.detail);
@@ -29,12 +29,13 @@ cc.Class({
         }, this);
     },
 
-    start () {
-
+    //每次打开都会触发
+    onEnable () {
+        console.log("onEnable****");
     },
 
-    // update (dt) {},
-
-    onDestroy() {
+    //关闭界面事件
+    onPanelClose() {
+        console.log("panelTest onPanelClose***");
     },
 });

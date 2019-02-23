@@ -10,9 +10,10 @@
 
 let game = require("game");
 let misc = require("misc");
+let comSceneBase = require("sceneBase");
 
 cc.Class({
-    extends: cc.Component,
+    extends: comSceneBase,
 
     properties: {
         btnDialog: cc.Button,
@@ -34,10 +35,8 @@ cc.Class({
         }, this);
 
         this.btnDialog.node.on("click", function() {
-            game.uiMgr.createUIFromPath("panelTest", "prefab/panelTest", function(node) {
-                node.parent = cc.director.getScene().getChildByName("sceneViewer");
-                game.tipsMgr.commonTips("游戏游戏游戏");
-            });
+            game.uiMgr.createUIFromPath("panelTest", "prefab/panelTest");
+            game.tipsMgr.commonTips("游戏游戏游戏");
 
         }, this);
 

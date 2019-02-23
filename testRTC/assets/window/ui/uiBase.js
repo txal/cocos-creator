@@ -32,9 +32,13 @@ cc.Class({
             event.stopPropagation();
         });
 
-        let btnClose = cc.find("nodeContent/btnClose", this.node) 
+        //关闭事件监听
+        let btnClose = cc.find("content/btnClose", this.node) 
         if (btnClose) {
            btnClose.on("touchend", function(event) {
+                if (self.onPanelClose) {
+                    self.onPanelClose();
+                }
                 let game = require("game");
                 game.uiMgr.closeUINode(this.node);
            }, this);
