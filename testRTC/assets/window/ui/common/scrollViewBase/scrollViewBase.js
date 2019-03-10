@@ -191,7 +191,6 @@ cc.Class({
         let title = this.getPoolTitle();   
         if (!title) {
             title = cc.instantiate(this.titleTemplate);
-            console.log("instantiate******");
         }
         return title;
     },

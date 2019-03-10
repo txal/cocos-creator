@@ -588,7 +588,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 626,
+      "width": 620,
       "height": 460
     },
     "_anchorPoint": {
@@ -799,8 +799,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 626,
-      "height": 230
+      "width": 620,
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -865,8 +865,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 626,
-      "height": 230
+      "width": 620,
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -876,7 +876,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -115,
+      "y": -120,
       "z": 0
     },
     "_scale": {
@@ -1014,17 +1014,17 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 180,
-      "height": 230
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0.5
+      "y": 1
     },
     "_position": {
       "__type__": "cc.Vec3",
       "x": -205,
-      "y": -115,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -1080,7 +1080,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 180,
-      "height": 230
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1090,7 +1090,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": -120,
       "z": 0
     },
     "_scale": {
@@ -1211,8 +1211,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 140,
-      "height": 140
+      "width": 130,
+      "height": 130
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1222,7 +1222,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 43.978102189781026,
+      "y": -65.94890510948905,
       "z": 0
     },
     "_scale": {
@@ -1343,8 +1343,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 104,
-      "height": 15
+      "width": 127.05,
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1354,7 +1354,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -36,
+      "y": -148.5,
       "z": 0
     },
     "_scale": {
@@ -1391,8 +1391,8 @@
     "_useOriginalSize": false,
     "_string": "专柜价￥310.00",
     "_N$string": "专柜价￥310.00",
-    "_fontSize": 15,
-    "_lineHeight": 15,
+    "_fontSize": 18,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -1417,7 +1417,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 71.5,
+    "_bottom": 82.5,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -1472,8 +1472,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 122,
-      "height": 15
+      "width": 148.04,
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1483,7 +1483,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -55,
+      "y": -170.5,
       "z": 0
     },
     "_scale": {
@@ -1520,8 +1520,8 @@
     "_useOriginalSize": false,
     "_string": "阿玛尼201#姨妈色",
     "_N$string": "阿玛尼201#姨妈色",
-    "_fontSize": 15,
-    "_lineHeight": 15,
+    "_fontSize": 18,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -1546,7 +1546,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 52.5,
+    "_bottom": 60.5,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -1601,8 +1601,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 120,
-      "height": 15
+      "width": 144,
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1612,7 +1612,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -75,
+      "y": -192.5,
       "z": 0
     },
     "_scale": {
@@ -1649,8 +1649,8 @@
     "_useOriginalSize": false,
     "_string": "【京东正品发货】",
     "_N$string": "【京东正品发货】",
-    "_fontSize": 15,
-    "_lineHeight": 15,
+    "_fontSize": 18,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -1675,7 +1675,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 32.5,
+    "_bottom": 38.5,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -1735,7 +1735,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 180,
-      "height": 26
+      "height": 33
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1745,7 +1745,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -102,
+      "y": -223.5,
       "z": 0
     },
     "_scale": {
@@ -1803,8 +1803,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 97.14,
-      "height": 16
+      "width": 118.93,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1851,8 +1851,8 @@
     "_useOriginalSize": false,
     "_string": "5.00元闯关购",
     "_N$string": "5.00元闯关购",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -1897,7 +1897,7 @@
     "node": {
       "__id__": 47
     },
-    "_enabled": true,
+    "_enabled": false,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -1993,7 +1993,7 @@
       "__id__": 25
     },
     "_enabled": true,
-    "alignMode": 1,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 1,
     "_left": 0,
@@ -2071,17 +2071,17 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 180,
-      "height": 230
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0.5
+      "y": 1
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -4,
-      "y": -115,
+      "x": 0,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -2137,7 +2137,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 180,
-      "height": 230
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2147,7 +2147,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": -120,
       "z": 0
     },
     "_scale": {
@@ -2234,7 +2234,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "7eW/2YyQVCj78XY9285Xpg",
+    "fileId": "a9dgmg13ZGBbieRCWvNlVV",
     "sync": false
   },
   {
@@ -2268,8 +2268,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 140,
-      "height": 140
+      "width": 130,
+      "height": 130
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2279,7 +2279,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 43.978102189781026,
+      "y": -65.94890510948905,
       "z": 0
     },
     "_scale": {
@@ -2366,7 +2366,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "e0tmSmre9OWai0N0a8KWS9",
+    "fileId": "00l8cDEORJhZ4ihJp6mi2M",
     "sync": false
   },
   {
@@ -2400,8 +2400,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 104,
-      "height": 15
+      "width": 127.05,
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2411,7 +2411,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -36,
+      "y": -148.5,
       "z": 0
     },
     "_scale": {
@@ -2448,8 +2448,8 @@
     "_useOriginalSize": false,
     "_string": "专柜价￥310.00",
     "_N$string": "专柜价￥310.00",
-    "_fontSize": 15,
-    "_lineHeight": 15,
+    "_fontSize": 18,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -2474,7 +2474,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 71.5,
+    "_bottom": 82.5,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -2495,7 +2495,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "01M7FpuOpDEoVxOOa5s6FY",
+    "fileId": "b6nQZ6qSVLYYmskudNO+ts",
     "sync": false
   },
   {
@@ -2529,8 +2529,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 122,
-      "height": 15
+      "width": 148.04,
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2540,7 +2540,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -55,
+      "y": -170.5,
       "z": 0
     },
     "_scale": {
@@ -2577,8 +2577,8 @@
     "_useOriginalSize": false,
     "_string": "阿玛尼201#姨妈色",
     "_N$string": "阿玛尼201#姨妈色",
-    "_fontSize": 15,
-    "_lineHeight": 15,
+    "_fontSize": 18,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -2603,7 +2603,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 52.5,
+    "_bottom": 60.5,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -2624,7 +2624,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "d2GpBE0E9KjJm9VbIkSDQF",
+    "fileId": "efTh3tvC5ALaCM/yyB4Nmm",
     "sync": false
   },
   {
@@ -2658,8 +2658,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 120,
-      "height": 15
+      "width": 144,
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2669,7 +2669,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -75,
+      "y": -192.5,
       "z": 0
     },
     "_scale": {
@@ -2706,8 +2706,8 @@
     "_useOriginalSize": false,
     "_string": "【京东正品发货】",
     "_N$string": "【京东正品发货】",
-    "_fontSize": 15,
-    "_lineHeight": 15,
+    "_fontSize": 18,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -2732,7 +2732,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 32.5,
+    "_bottom": 38.5,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -2753,7 +2753,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "afCY8++kdL45KWGCmdEIhv",
+    "fileId": "82xYNFo5ZKtrt9aP9mJrLI",
     "sync": false
   },
   {
@@ -2792,7 +2792,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 180,
-      "height": 26
+      "height": 33
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2802,7 +2802,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -102,
+      "y": -223.5,
       "z": 0
     },
     "_scale": {
@@ -2860,8 +2860,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 97.14,
-      "height": 16
+      "width": 118.93,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2908,8 +2908,8 @@
     "_useOriginalSize": false,
     "_string": "5.00元闯关购",
     "_N$string": "5.00元闯关购",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -2954,7 +2954,7 @@
     "node": {
       "__id__": 79
     },
-    "_enabled": true,
+    "_enabled": false,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -2973,7 +2973,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "08XYiOIk5Op6IJfN1aT+Qm",
+    "fileId": "05iBjXt/tCOJDPhQh895Y7",
     "sync": false
   },
   {
@@ -3039,7 +3039,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "17ymrOr8lGwpbkl0CaVPgy",
+    "fileId": "66ui3Wvw9Jk5JpJbS3XLPP",
     "sync": false
   },
   {
@@ -3050,7 +3050,7 @@
       "__id__": 57
     },
     "_enabled": true,
-    "alignMode": 1,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 1,
     "_left": 0,
@@ -3077,7 +3077,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "6aogfJlIFO046KZsihOkkw",
+    "fileId": "8a4fWFN2BOxpXlw1BeF/6H",
     "sync": false
   },
   {
@@ -3128,17 +3128,17 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 180,
-      "height": 230
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
       "x": 0.5,
-      "y": 0.5
+      "y": 1
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 195,
-      "y": -115,
+      "x": 204,
+      "y": 0,
       "z": 0
     },
     "_scale": {
@@ -3194,7 +3194,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 180,
-      "height": 230
+      "height": 240
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3204,7 +3204,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 0,
+      "y": -120,
       "z": 0
     },
     "_scale": {
@@ -3291,7 +3291,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "66+5HjCGlH9Zw1Zz637nzM",
+    "fileId": "c5KUp3HtFNeKbLYWPJe0QK",
     "sync": false
   },
   {
@@ -3325,8 +3325,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 140,
-      "height": 140
+      "width": 130,
+      "height": 130
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3336,7 +3336,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 43.978102189781026,
+      "y": -65.94890510948905,
       "z": 0
     },
     "_scale": {
@@ -3423,7 +3423,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "cfjkZEjcRKbZOWlh4hPYhE",
+    "fileId": "1bWsYjkYNHDqwU+Mng8ORw",
     "sync": false
   },
   {
@@ -3457,8 +3457,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 104,
-      "height": 15
+      "width": 127.05,
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3468,7 +3468,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -36,
+      "y": -148.5,
       "z": 0
     },
     "_scale": {
@@ -3505,8 +3505,8 @@
     "_useOriginalSize": false,
     "_string": "专柜价￥310.00",
     "_N$string": "专柜价￥310.00",
-    "_fontSize": 15,
-    "_lineHeight": 15,
+    "_fontSize": 18,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -3531,7 +3531,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 71.5,
+    "_bottom": 82.5,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -3552,7 +3552,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "64h0mgzVJFBpqcGsju3ydL",
+    "fileId": "ae+mc2mcpOpZSP4pqJZcFB",
     "sync": false
   },
   {
@@ -3586,8 +3586,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 122,
-      "height": 15
+      "width": 148.04,
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3597,7 +3597,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -55,
+      "y": -170.5,
       "z": 0
     },
     "_scale": {
@@ -3634,8 +3634,8 @@
     "_useOriginalSize": false,
     "_string": "阿玛尼201#姨妈色",
     "_N$string": "阿玛尼201#姨妈色",
-    "_fontSize": 15,
-    "_lineHeight": 15,
+    "_fontSize": 18,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -3660,7 +3660,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 52.5,
+    "_bottom": 60.5,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -3681,7 +3681,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "0ayLsMyRpO3IApbJVn1zjt",
+    "fileId": "7fZvD9kiRAu7t8HN+iKCmw",
     "sync": false
   },
   {
@@ -3715,8 +3715,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 120,
-      "height": 15
+      "width": 144,
+      "height": 18
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3726,7 +3726,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -75,
+      "y": -192.5,
       "z": 0
     },
     "_scale": {
@@ -3763,8 +3763,8 @@
     "_useOriginalSize": false,
     "_string": "【京东正品发货】",
     "_N$string": "【京东正品发货】",
-    "_fontSize": 15,
-    "_lineHeight": 15,
+    "_fontSize": 18,
+    "_lineHeight": 18,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -3789,7 +3789,7 @@
     "_left": 0,
     "_right": 0,
     "_top": 0,
-    "_bottom": 32.5,
+    "_bottom": 38.5,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,
@@ -3810,7 +3810,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "45tOHx6B5J4qz0CG1ZVHI6",
+    "fileId": "1d9X6dUdlExY+hAlDhaaG/",
     "sync": false
   },
   {
@@ -3849,7 +3849,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 180,
-      "height": 26
+      "height": 33
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3859,7 +3859,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -102,
+      "y": -223.5,
       "z": 0
     },
     "_scale": {
@@ -3917,8 +3917,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 97.14,
-      "height": 16
+      "width": 118.93,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -3965,8 +3965,8 @@
     "_useOriginalSize": false,
     "_string": "5.00元闯关购",
     "_N$string": "5.00元闯关购",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -4011,7 +4011,7 @@
     "node": {
       "__id__": 111
     },
-    "_enabled": true,
+    "_enabled": false,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -4030,7 +4030,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "10lWoaSg9IdYD28/H+FvAC",
+    "fileId": "3eCIIWxPRCy6lZCZ8Xsg+9",
     "sync": false
   },
   {
@@ -4096,7 +4096,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "c4OG4dngFDH7cK9hESJfjx",
+    "fileId": "addZHUG6xJvZBbjXxoXQdJ",
     "sync": false
   },
   {
@@ -4107,7 +4107,7 @@
       "__id__": 89
     },
     "_enabled": true,
-    "alignMode": 1,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 1,
     "_left": 0,
@@ -4134,7 +4134,7 @@
     "asset": {
       "__uuid__": "82b67c50-5fb8-478d-8176-efb700073376"
     },
-    "fileId": "2aJxfVfyZBloK+OPSCllxK",
+    "fileId": "b2mJ0kZ1RMg6/NfuV9gbj0",
     "sync": false
   },
   {
@@ -4212,8 +4212,8 @@
     "alignMode": 1,
     "_target": null,
     "_alignFlags": 40,
-    "_left": 7,
-    "_right": 7,
+    "_left": 10,
+    "_right": 10,
     "_top": 0,
     "_bottom": 135,
     "_verticalCenter": 0,
@@ -4342,7 +4342,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 316,
+      "x": 320,
       "y": 0,
       "z": 0
     },
@@ -4530,7 +4530,7 @@
     "_target": null,
     "_alignFlags": 37,
     "_left": 350.07654921020657,
-    "_right": 4,
+    "_right": 0,
     "_top": 8,
     "_bottom": 8,
     "_verticalCenter": 0,

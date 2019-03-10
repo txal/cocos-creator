@@ -17,7 +17,7 @@
         "__id__": 2
       },
       {
-        "__id__": 72
+        "__id__": 74
       }
     ],
     "_active": true,
@@ -44,8 +44,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 0.5916666666666667,
+      "y": 0.5916666666666667,
       "z": 1
     },
     "_quat": {
@@ -79,13 +79,16 @@
       },
       {
         "__id__": 69
+      },
+      {
+        "__id__": 71
       }
     ],
     "_active": true,
     "_level": 0,
     "_components": [
       {
-        "__id__": 71
+        "__id__": 73
       }
     ],
     "_prefab": null,
@@ -279,7 +282,7 @@
     "_skewY": 0,
     "_zIndex": 0,
     "groupIndex": 0,
-    "_id": "e8Y61DXkdCgqu0Xk7WhjtK"
+    "_id": "0dTmELcQVG1JYwwjoLxPrF"
   },
   {
     "__type__": "cc.Sprite",
@@ -307,7 +310,7 @@
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
-    "_id": "a4L2XzkXpP2aPUzWFAcFAO"
+    "_id": "62jv78KodGibGTjOUjPt/0"
   },
   {
     "__type__": "cc.Widget",
@@ -317,7 +320,7 @@
       "__id__": 5
     },
     "_enabled": true,
-    "alignMode": 1,
+    "alignMode": 2,
     "_target": null,
     "_alignFlags": 45,
     "_left": 0,
@@ -334,7 +337,7 @@
     "_isAbsVerticalCenter": true,
     "_originalWidth": 720,
     "_originalHeight": 1334,
-    "_id": "e3YbLupepGIpyu15n0jM60"
+    "_id": "eaQV38g/tHVZovU8yCKlQb"
   },
   {
     "__type__": "cc.Node",
@@ -447,7 +450,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": -7,
-      "y": 85,
+      "y": 79,
       "z": 0
     },
     "_scale": {
@@ -532,7 +535,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 129,
+      "width": 144,
       "height": 16
     },
     "_anchorPoint": {
@@ -543,7 +546,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": 14,
+      "y": 2,
       "z": 0
     },
     "_scale": {
@@ -596,8 +599,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 64,
-      "height": 16
+      "width": 80,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -606,7 +609,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -32.5,
+      "x": -32,
       "y": 0,
       "z": 0
     },
@@ -644,8 +647,8 @@
     "_useOriginalSize": false,
     "_string": "普通会员",
     "_N$string": "普通会员",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -729,7 +732,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 37,
+      "x": 44.5,
       "y": 0,
       "z": 0
     },
@@ -828,8 +831,8 @@
     "_useOriginalSize": false,
     "_string": "升级",
     "_N$string": "升级",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": false,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -1020,7 +1023,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 193,
+      "width": 246,
       "height": 16
     },
     "_anchorPoint": {
@@ -1031,7 +1034,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -18,
+      "y": -32,
       "z": 0
     },
     "_scale": {
@@ -1084,8 +1087,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 73.83,
-      "height": 16
+      "width": 92.29,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1094,7 +1097,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": -64.5,
+      "x": -76.85499999999999,
       "y": 0,
       "z": 0
     },
@@ -1132,8 +1135,8 @@
     "_useOriginalSize": false,
     "_string": "[ID:43660]",
     "_N$string": "[ID:43660]",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -1155,7 +1158,7 @@
     "alignMode": 2,
     "_target": null,
     "_alignFlags": 10,
-    "_left": -4.914999999999999,
+    "_left": 0,
     "_right": 0,
     "_top": 0,
     "_bottom": 0,
@@ -1200,8 +1203,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 112.09,
-      "height": 16
+      "width": 140.11,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1210,7 +1213,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 34,
+      "x": 52.94499999999999,
       "y": 0,
       "z": 0
     },
@@ -1248,8 +1251,8 @@
     "_useOriginalSize": false,
     "_string": "游客688546762",
     "_N$string": "游客688546762",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -1270,9 +1273,9 @@
     "_enabled": true,
     "alignMode": 2,
     "_target": null,
-    "_alignFlags": 10,
-    "_left": 74.455,
-    "_right": -24.045,
+    "_alignFlags": 34,
+    "_left": 60.44499999999999,
+    "_right": 0,
     "_top": 0,
     "_bottom": 0,
     "_verticalCenter": 0,
@@ -1370,7 +1373,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -93,
+      "y": -108,
       "z": 0
     },
     "_scale": {
@@ -1613,8 +1616,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 64,
-      "height": 16
+      "width": 80,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1661,8 +1664,8 @@
     "_useOriginalSize": false,
     "_string": "我的口红",
     "_N$string": "我的口红",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -1686,7 +1689,7 @@
     "_alignFlags": 17,
     "_left": 0,
     "_right": 0,
-    "_top": 5,
+    "_top": 3,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -1848,8 +1851,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 26.7,
-      "height": 16
+      "width": 33.37,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1858,7 +1861,7 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 23.000000000000007,
+      "x": 22.999999999999996,
       "y": -10,
       "z": 0
     },
@@ -1896,8 +1899,8 @@
     "_useOriginalSize": false,
     "_string": "000",
     "_N$string": "000",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -1919,9 +1922,9 @@
     "alignMode": 2,
     "_target": null,
     "_alignFlags": 9,
-    "_left": 109.65,
+    "_left": 106.315,
     "_right": 0,
-    "_top": 42,
+    "_top": 40,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 13,
@@ -1991,7 +1994,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1,
+      "width": 2,
       "height": 60
     },
     "_anchorPoint": {
@@ -2178,8 +2181,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 64,
-      "height": 16
+      "width": 80,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2226,8 +2229,8 @@
     "_useOriginalSize": false,
     "_string": "我的余额",
     "_N$string": "我的余额",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -2251,7 +2254,7 @@
     "_alignFlags": 17,
     "_left": 0,
     "_right": 0,
-    "_top": 5,
+    "_top": 3,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -2294,8 +2297,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 47.14,
-      "height": 16
+      "width": 58.93,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2342,8 +2345,8 @@
     "_useOriginalSize": false,
     "_string": "0.00元",
     "_N$string": "0.00元",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -2367,7 +2370,7 @@
     "_alignFlags": 17,
     "_left": 0,
     "_right": 0,
-    "_top": 42,
+    "_top": 40,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -2437,7 +2440,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 1,
+      "width": 2,
       "height": 60
     },
     "_anchorPoint": {
@@ -2624,8 +2627,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 80,
-      "height": 16
+      "width": 100,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2672,8 +2675,8 @@
     "_useOriginalSize": false,
     "_string": "可提现佣金",
     "_N$string": "可提现佣金",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -2697,7 +2700,7 @@
     "_alignFlags": 17,
     "_left": 0,
     "_right": 0,
-    "_top": 5,
+    "_top": 3,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -2740,8 +2743,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 47.14,
-      "height": 16
+      "width": 58.93,
+      "height": 20
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -2788,8 +2791,8 @@
     "_useOriginalSize": false,
     "_string": "0.00元",
     "_N$string": "0.00元",
-    "_fontSize": 16,
-    "_lineHeight": 16,
+    "_fontSize": 20,
+    "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": null,
     "_isSystemFontUsed": true,
@@ -2813,7 +2816,7 @@
     "_alignFlags": 17,
     "_left": 0,
     "_right": 0,
-    "_top": 42,
+    "_top": 40,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -2867,7 +2870,7 @@
     "_alignFlags": 17,
     "_left": 0,
     "_right": 0,
-    "_top": 203,
+    "_top": 218,
     "_bottom": 0,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
@@ -2891,7 +2894,7 @@
     "_enabled": true,
     "alignMode": 1,
     "_target": null,
-    "_alignFlags": 1,
+    "_alignFlags": 17,
     "_left": 0,
     "_right": 0,
     "_top": 0,
@@ -2914,9 +2917,41 @@
     "_parent": {
       "__id__": 2
     },
-    "_id": "efo52aBghL8ZwFdwBmOZtK",
+    "_id": "f5Z1Zi9kNBVr2MS0nS9WOQ",
     "_prefab": {
       "__id__": 70
+    },
+    "_name": "scrollViewFunc",
+    "_active": true,
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": -115,
+      "z": 0
+    },
+    "_rotationX": 0,
+    "_rotationY": 0
+  },
+  {
+    "__type__": "cc.PrefabInfo",
+    "root": {
+      "__id__": 69
+    },
+    "asset": {
+      "__uuid__": "a24afbce-028b-4562-a2d3-5c0a03109066"
+    },
+    "fileId": "e5NqJ9aUJO+rulk+jA7lNA",
+    "sync": true
+  },
+  {
+    "__type__": "cc.Node",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_id": "efo52aBghL8ZwFdwBmOZtK",
+    "_prefab": {
+      "__id__": 72
     },
     "_name": "panelBottom",
     "_active": true,
@@ -2932,7 +2967,7 @@
   {
     "__type__": "cc.PrefabInfo",
     "root": {
-      "__id__": 69
+      "__id__": 71
     },
     "asset": {
       "__uuid__": "7c24a726-0086-4f33-af4b-bc49f27af4b1"
@@ -2969,7 +3004,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 73
+        "__id__": 75
       }
     ],
     "_prefab": null,
@@ -3023,7 +3058,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 72
+      "__id__": 74
     },
     "_enabled": true,
     "alignMode": 2,
