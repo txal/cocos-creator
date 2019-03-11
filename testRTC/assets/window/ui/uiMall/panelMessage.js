@@ -8,8 +8,11 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
+let game = require("game");
+let comUIBase = require("uiBase");
+
 cc.Class({
-    extends: cc.Component,
+    extends: comUIBase,
 
     properties: {
         // foo: {
@@ -31,7 +34,16 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad () {
+       this.node.on("touchend", function(event) {
+            if (self.onPanelClose) {
+                self.onPanelClose();
+            }
+            let game = require("game");
+            game.uiMgr.closeUINode(this.node);
+       }, this);
+       
+    },
 
     start () {
 

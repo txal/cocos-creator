@@ -26,7 +26,8 @@ cc.Class({
 
     //取场景显示器
     getSceneViewer() {
-        return cc.director.getScene().getChildByName("sceneViewer");
+        // return cc.director.getScene().getChildByName("sceneViewer");
+        return cc.director.getScene().getChildByName("Canvas");
     },
 
     //@name 界面名称

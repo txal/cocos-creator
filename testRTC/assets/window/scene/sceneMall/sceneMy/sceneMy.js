@@ -8,8 +8,11 @@
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
 
+let game = require("game");
+let comSceneBase = require("sceneBase");
+
 cc.Class({
-    extends: cc.Component,
+    extends: comSceneBase,
 
     properties: {
         // foo: {

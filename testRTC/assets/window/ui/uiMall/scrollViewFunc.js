@@ -60,7 +60,7 @@ cc.Class({
             node.color = new cc.Color(255, 255, 255);
             this._touchTitle = null;
         }
-        // game.uiMgr.createUIFromPath("panelMessage", "prefab/prefabMall/panelMessage");
+        game.uiMgr.createUIFromPath("panelMessage", "prefab/prefabMall/panelMessage");
     },
 
     onTitleTouchCancel() {
